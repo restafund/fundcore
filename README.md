@@ -2,12 +2,12 @@
 
 > restafund Core Page
 
-![alt text](https://wallpapercave.com/wp/wp2163725.jpg "Rocket")
+![alt text](https://restafund.com/wp-content/uploads/2019/07/restafundlogo2.png "Restafund")
 
 # Restafund Engineering Onboarding Starter
 
 ```
-This Repos till on progress, Just wait....
+This Repo still on progress, Just wait....
 ```
 
 Hello. funcore here is a repository for restafund front-end SSR.
