@@ -1,0 +1,134 @@
+.circle {
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  bottom: -80px;
+}
+.wrapper-banner {
+  position: relative;
+  margin-top: 50px;
+}
+.wallpaper-home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  .background-home {
+    width: 100%;
+    img {
+      width: 650px;
+      float: right;
+    }
+  }
+  .wallpaper-content {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 150px;
+    .content {
+      padding: 0 120px;
+      span {
+        color: #555555;
+      }
+      h1 {
+        color: #28458F;
+        font-weight: 100;
+        width: 750px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.list-project {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  .box-project {
+    position: relative;
+    display: inline-block;
+    height: 280px;
+    width: 380px;
+    margin: 0 15px;
+    // opacity: 0.5;
+    border-radius: 8px;
+    background-color:rgba(255,255,255,0.5);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+    text-align: center;
+    .content {
+      opacity: 1;
+      width: 300px;
+      height: 150px;
+      position: absolute;
+      top:0;
+      right:0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+.fz- {
+  &14 {
+    font-size: 14px;
+  }
+  &15 {
+    font-size: 15px;
+  }
+  &18 {
+    font-size: 18px;
+  }
+  &56 {
+    font-size: 56px;
+  }
+  &20 {
+    font-size: 20px;
+  }
+}
+.trigger-banner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(40,69,143,0.5);
+  text-align: center;
+  line-height: 48px;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    color: #ffffff - 40;
+    background-color: rgba(40,69,143,0.5) - 40;
+  }
+  &.arrow- {
+    &left {
+      left: 30px;
+    }
+    &right {
+      right: 30px;
+    }
+  }
+}
+.btn-wraper {
+  height: 80px;
+  line-height: 80px;
+}
+.color- {
+  &blue {
+    color:#28458F;
+  }
+  &gray {
+    color: #434343;
+  }
+}
+.f-bold {
+  font-weight: bold;
+}

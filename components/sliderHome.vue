@@ -1,0 +1,74 @@
+<template>
+  <div class="wrapper-banner">
+    <div class="wallpaper-home">
+      <div class="background-home">
+        <img :src="bgOne">
+      </div>
+      <div class="wallpaper-content">
+        <div class="content">
+          <span class="fz-14">RESTAFUND PROJECTS</span>
+          <h1 class="fz-56">
+            Semua Orang Bisa Berinvestasi
+          </h1>
+          <span class="fz-18">di Properti dengan Aman dan Mudah</span>
+          <div class="btn-wraper">
+            <ButtonResta
+              :label="'DAFTAR SEKARANG'"
+            />
+          </div>
+        </div>
+        <div class="trigger-banner arrow-left">
+          <i class="fa fa-arrow-left" aria-hidden="true" />
+        </div>
+        <div class="trigger-banner arrow-right">
+          <i class="fa fa-arrow-right" aria-hidden="true" />
+        </div>
+      </div>
+    </div>
+    <div class="list-project">
+      <div v-for="(list, index) in project" :key="index" class="box-project">
+        <div class="content">
+          <span class="fz-56 color-blue f-bold ">{{ list.value }}</span>
+          <span class="fx-20 color-gray">{{ list.name }}</span>
+        </div>
+      </div>
+      <div class="circle">
+        <img :src="circle">
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import bgOne from '@/assets/wallpaper1.png'
+import ButtonResta from '@/components/smallComponents/button'
+import circle from '@/assets/circle-red.svg'
+export default {
+  name: 'SliderHome',
+  components: {
+    ButtonResta
+  },
+  data () {
+    return {
+      bgOne,
+      circle,
+      project: [
+        {
+          name: 'Proyek',
+          value: '19'
+        },
+        {
+          name: 'Nilai Total Proyek',
+          value: '52,8 M'
+        },
+        {
+          name: 'Investor Terdaftar',
+          value: '62'
+        }
+      ]
+    }
+  }
+}
+</script>
+<style lang="scss">
+@import '@/styles/slider-home.scss';
+</style>

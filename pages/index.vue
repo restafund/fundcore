@@ -1,6 +1,10 @@
 <template>
-  <div class="container">
-    <div>
+  <div>
+    <sliderHome />
+    <section class="benefit-section">
+      adasd
+    </section>
+    <div class="container">
       <h2 class="subtitle">
         restafund Core
         <i class="fa fa-address-book" aria-hidden="true" />
@@ -10,8 +14,11 @@
 </template>
 
 <script>
-
+import sliderHome from '../components/sliderHome'
 export default {
+  components: {
+    sliderHome
+  },
   head () {
     return {
       title: 'Home tutorial',
@@ -27,35 +34,6 @@ export default {
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style lang="scss" scope>
+@import '@/styles/home.scss';
 </style>

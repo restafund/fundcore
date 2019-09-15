@@ -1,9 +1,7 @@
 <template>
   <div class="container-outside">
     <appHeader />
-    <div class="container">
-      <nuxt />
-    </div>
+    <nuxt />
   </div>
 </template>
 <script>

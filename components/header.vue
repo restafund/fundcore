@@ -70,6 +70,10 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 99999;
   height: 60px;
   display: flex;
   justify-content: space-between;
