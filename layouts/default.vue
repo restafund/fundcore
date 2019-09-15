@@ -1,13 +1,24 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="container-outside">
+    <appHeader />
+    <div class="container">
+      <nuxt />
+    </div>
   </div>
 </template>
+<script>
+import appHeader from '../components/header'
+export default {
+  components: {
+    appHeader
+  }
+}
+</script>
 
-<style>
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap');
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -16,14 +27,22 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
+body {
+  font-family: 'Poppins', sans-serif;
+}
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
 }
-
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  background: #fff;
+}
 .button--green {
   display: inline-block;
   border-radius: 4px;
