@@ -1,6 +1,7 @@
 <template>
   <button
-    class="button-resta"
+    :class="background"
+    :style="`font-size: ${size}px`"
     @click="onClick"
   >
     {{ label }}
@@ -13,6 +14,14 @@ export default {
     label: {
       type: String,
       default: 'Button'
+    },
+    background: {
+      type: String,
+      default: 'yellow'
+    },
+    size: {
+      type: String,
+      default: '12'
     }
   },
   methods: {
@@ -23,7 +32,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.button-resta {
+.yellow {
   height: 48px;
   min-width: 200px;
   border-radius: 49.5px;
@@ -31,5 +40,17 @@ export default {
   color: #292929;
   font-size: 12px;
   border: none;
+  padding: 0 40px;
 }
+.blue {
+  height: 48px;
+  min-width: 200px;
+  border-radius: 49.5px;
+  background-color: #28458F;
+  color: #FFC80A;
+  font-size: 12px;
+  border: none;
+  padding: 0 40px;
+}
+
 </style>

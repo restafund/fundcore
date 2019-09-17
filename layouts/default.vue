@@ -39,7 +39,6 @@ body {
   margin: 2rem auto;
   overflow: hidden;
   padding: 1rem 2rem;
-  background: #fff;
 }
 .button--green {
   display: inline-block;
@@ -68,5 +67,46 @@ body {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.color- {
+  &blue {
+    color:#28458F;
+  }
+  &gray {
+    color: #434343;
+  }
+  &brown {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+.f-bold {
+  font-weight: bold;
+}
+.fz- {
+  &12 {
+    font-size: 12px;
+  }
+  &14 {
+    font-size: 14px;
+  }
+  &15 {
+    font-size: 15px;
+  }
+  &16 {
+    font-size: 16px;
+  }
+  &18 {
+    font-size: 18px;
+  }
+  &36 {
+    font-size: 36px;
+  }
+  &56 {
+    font-size: 56px;
+  }
+  &20 {
+    font-size: 20px;
+  }
 }
 </style>
