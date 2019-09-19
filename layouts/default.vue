@@ -2,13 +2,15 @@
   <div class="container-outside">
     <appHeader />
     <nuxt />
+    <appFooter />
   </div>
 </template>
 <script>
 import appHeader from '../components/header'
+import appFooter from '../components/footer'
 export default {
   components: {
-    appHeader
+    appHeader, appFooter
   }
 }
 </script>

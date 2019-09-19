@@ -101,6 +101,7 @@
       </section>
 
       <section class="core-project">
+        <div style="position:relative;">
         <span class="color-blue fz-36">Proyek Berjalan</span>
         <div class="project">
           <div class="wrapper-overflow">
@@ -130,11 +131,49 @@
               </div>
             </div>
           </div>
-          <div class="trigger-banner arrow-left" style="left: 0">
+          <div class="trigger-banner arrow-left" style="left: -45px">
             <i class="fa fa-arrow-left" aria-hidden="true" />
           </div>
-          <div class="trigger-banner arrow-right"  style="right: 0">
+          <div class="trigger-banner arrow-right"  style="right: -45px">
             <i class="fa fa-arrow-right" aria-hidden="true" />
+          </div>
+        </div>
+        </div>
+        <div class="purple-img">
+          <img :src="purpleImg" />
+        </div>
+      </section>
+
+      <section class="news-blog">
+        <span class="color-blue fz-36" style="margin-bottom: 30px;">Berita Terbaru</span>
+        <div class="blog-list">
+          <div class="info">Business</div>
+          <div class="content">
+            Sebelum Ikut Investasi di Lokasi Ibu Kota Baru, Perhatikan Beberapa Hal Ini!
+            <span>9 September 2019</span>
+          </div>
+          <div class="img-blog">
+            <img src="https://picsum.photos/seed/picsum/200/300" />
+          </div>
+        </div>
+        <div class="blog-list">
+          <div class="img-blog">
+            <img src="https://picsum.photos/seed/picsum/200/300" />
+          </div>
+          <div class="info" style="background-color:#FFC80A;">GROWTH</div>
+          <div class="content">
+            Ibu Kota Pindah, Investasi Properti Bakal Meroket
+            <span>10 September 2019</span>
+          </div>
+        </div>
+        <div class="blog-list">
+          <div class="info" style="background-color: #28458F;">INVEST</div>
+          <div class="content">
+            Mustika Land Bangun Rumah Rp 200 Jutaan di Cikarang
+            <span>9 September 2019</span>
+          </div>
+          <div class="img-blog">
+            <img src="https://picsum.photos/seed/picsum/200/300" />
           </div>
         </div>
       </section>
@@ -148,13 +187,14 @@ import groupInfo from '../assets/groupShare.svg'
 import buttonResta from '../components/smallComponents/button'
 import bigCircle from '../assets/oval.svg'
 import fundImg from '../assets/fund.svg'
+import purpleImg from '../assets/Mask.svg'
 export default {
   components: {
     sliderHome, buttonResta
   },
   head () {
     return {
-      title: 'Home tutorial',
+      title: 'Restafund',
       meta: [
         {
           hid: 'dio ganteng nih',
@@ -191,6 +231,7 @@ export default {
       groupInfo,
       bigCircle,
       fundImg,
+      purpleImg,
       project: [
         {
           img: 'https://assets0.biggerpockets.com/uploads/wordpress_blog_post/image/9112/pretty-home.jpg',
@@ -216,7 +257,8 @@ export default {
           description: 'AIRY ROOM ECO SYARIAH BSD SERPONG',
           price: 'Rp 12.900.000.000'
         }
-      ]
+      ],
+      windowTop: ''
     }
   }
 }
@@ -225,7 +267,7 @@ export default {
 <style lang="scss" scope>
 @import '@/styles/home.scss';
 section {
-  margin: 90px 0;
+  margin: 75px 0;
 }
 .benefit-section {
   width: 100%;
@@ -342,7 +384,7 @@ section {
 }
 .core-project {
   padding: 0 50px;
-  position: relative;
+  // position: relative;
   .project {
     text-align: left;
     overflow: scroll;
@@ -409,7 +451,65 @@ section {
     z-index: 2;
   }
 }
+.news-blog {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  span {
+    display: block;
+  }
+  .blog-list {
+    border-radius: 8px;
+    width: 320px;
+    display: inline-block;
+    float: left;
+    margin: 0 25px;
+      .info {
+      height: 30px;
+      width: 100px;
+      border-radius: 15.66px;
+      line-height: 30px;
+      background-color: #288F84;
+      font-size: 12px;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+    }
+    .content {
+      font-weight: bold;
+      font-size: 18px;
+      color: #000000;
+      text-align: left;
+      margin: 15px 0;
+      span {
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-top: 15px;
+      }
+    }
+    .img-blog {
+      text-align: left;
+      img {
+        width: 320px;
+        height: 320px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
 .m-a-sm {
   margin: 15px 0;
+}
+.purple-img {
+  position: absolute;
+  right: 0;
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
 }
 </style>

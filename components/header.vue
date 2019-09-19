@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header :class="isheader ? `active-header header` : 'header'">
     <div class="logo-container">
       <img :src="logo">
     </div>
@@ -62,7 +62,22 @@ export default {
     return {
       logo,
       isOpen: false,
-      active: false
+      active: false,
+      isheader: false
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.onScroll)
+    console.log(window.addEventListener('scroll', this.onScroll))
+  },
+  methods: {
+    onScroll (e) {
+      this.windowTop = window.top.scrollY /* or: e.target.documentElement.scrollTop */
+      if (this.windowTop > 100) {
+        this.isheader = true
+      } else {
+        this.isheader = false
+      }
     }
   }
 }
@@ -108,6 +123,10 @@ export default {
     border-radius: 49.5px;
     }
   }
+}
+.active-header {
+  background-color: white;
+  border-bottom: solid 1px #ddd;
 }
 .logo-container {
   img {
