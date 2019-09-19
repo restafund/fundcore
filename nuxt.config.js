@@ -35,10 +35,10 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
-  ],
+  // buildModules: [
+  //   // Doc: https://github.com/nuxt-community/eslint-module
+  //   '@nuxtjs/eslint-module'
+  // ],
   /*
   ** Nuxt.js modules
   */
@@ -46,6 +46,9 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  devModules: [
+    '@nuxtjs/eslint-module'
+  ]
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
