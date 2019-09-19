@@ -1,5 +1,5 @@
 
-export default {
+module.exports = {
   mode: 'universal',
   /*
   ** Headers of the page
@@ -37,12 +37,22 @@ export default {
   plugins: [
   ],
   /*
+  ** Nuxt.js dev-modules
+  */
+  // buildModules: [
+  //   // Doc: https://github.com/nuxt-community/eslint-module
+  //   '@nuxtjs/eslint-module'
+  // ],
+  /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/axios'
   ],
+  // devModules: [
+  //   '@nuxtjs/eslint-module'
+  // ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -56,7 +66,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    extend (config, ctx) {
     }
   }
 }
