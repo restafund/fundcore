@@ -18,6 +18,10 @@ export default {
       { src: 'https://kit.fontawesome.com/ff1b20f0ce.js', crossorigin: 'anonymous' }
     ],
   },
+  server: {
+    port: 6708, // default: 3000
+    host: '0.0.0.0', // default: localhost
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -33,22 +37,14 @@ export default {
   plugins: [
   ],
   /*
-  ** Nuxt.js dev-modules
-  */
-  // buildModules: [
-  //   // Doc: https://github.com/nuxt-community/eslint-module
-  //   '@nuxtjs/eslint-module'
-  // ],
-  /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    '@nuxtjs/eslint-module'
   ],
-  // devModules: [
-  //   '@nuxtjs/eslint-module'
-  // ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -62,7 +58,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }
