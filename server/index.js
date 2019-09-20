@@ -13,7 +13,7 @@ async function start () {
 
   const { host, port } = nuxt.options.server
   const heroku_host = process.env.HOST || host || '127.0.0.1'
-  const heroku_port = process.env.PORT || port || 3000
+  const heroku_port = process.env.PORT || port || 5000
 
   // Build only in dev mode
   if (config.dev) {
@@ -27,9 +27,9 @@ async function start () {
   app.use(nuxt.render)
 
   // Listen the server
-  app.listen(port, host)
+  app.listen(heroku_port, heroku_host)
   consola.ready({
-    message: `Server listening on http://${host}:${port}`,
+    message: `Server listening on http://${heroku_host}:${heroku_port}`,
     badge: true
   })
 }
