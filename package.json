@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "heroku-postbuild": "yarn run start"
+    "heroku-postbuild": "yarn run build && yarn run start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
