@@ -1,1 +1,1 @@
-web: nuxt start
+web: exec rails server -p $PORT
