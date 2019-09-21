@@ -11,7 +11,7 @@ async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
 
-  const { host, port } = nuxt.options.server
+  // const { host, port } = nuxt.options.server
   const heroku_host = process.env.HOST || host || '127.0.0.1'
   const heroku_port = process.env.PORT || port || 5000
 
