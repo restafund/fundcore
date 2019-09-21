@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', src: '@/assets/logo-small.ico' }
+      { rel: 'icon', type: 'image/x-icon', src: './favicon.ico' }
     ],
     script: [
       { src: 'https://kit.fontawesome.com/ff1b20f0ce.js', crossorigin: 'anonymous' }
