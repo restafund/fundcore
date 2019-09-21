@@ -1,1 +1,1 @@
-web: exec rails server -p $PORT
+web: node .nuxt/app.js
