@@ -2,7 +2,7 @@
   <div class="wrapper-banner">
     <div class="wallpaper-home">
       <div class="background-home">
-        <img :src="bgOne">
+        <img :src="bgOne" alt="big">
       </div>
       <div class="wallpaper-content">
         <div class="content">
@@ -33,13 +33,13 @@
         </div>
       </div>
       <div class="circle">
-        <img :src="circle">
+        <img :src="circle" alt="circle">
       </div>
     </div>
   </div>
 </template>
 <script>
-import bgOne from '@/assets/wallpaper1.png'
+import bgOne from '@/assets/wallpaper.png'
 import ButtonResta from '@/components/smallComponents/button'
 import circle from '@/assets/circle-red.svg'
 export default {

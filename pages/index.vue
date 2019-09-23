@@ -102,78 +102,84 @@
 
       <section class="core-project">
         <div style="position:relative;">
-        <span class="color-blue fz-36">Proyek Berjalan</span>
-        <div class="project">
-          <div class="wrapper-overflow">
-            <div class="card-project" v-for="(project, index) in project" :key="index">
-              <div class="img">
-                <img :src="project.img" alt="house">
-              </div>
-              <div class="content">
-                <span class="color-brown fz-12">{{ project.pendana }} Pendana</span>
-                <p>
-                  {{ project.description }}
-                </p>
-              </div>
-              <div class="total">
-                <span class="color-blue fz-16 f-bold">{{ project.price }}</span>
-                <div class="progress-bar-resta">
-                  <span class="behind" />
-                  <span class="core" />
+          <span class="color-blue fz-36">Proyek Berjalan</span>
+          <div class="project">
+            <div class="wrapper-overflow">
+              <div v-for="(projectData, index) in project" :key="index" class="card-project">
+                <div class="img">
+                  <img :src="projectData.img" alt="house">
+                </div>
+                <div class="content">
+                  <span class="color-brown fz-12">{{ projectData.pendana }} Pendana</span>
+                  <p>
+                    {{ projectData.description }}
+                  </p>
+                </div>
+                <div class="total">
+                  <span class="color-blue fz-16 f-bold">{{ projectData.price }}</span>
+                  <div class="progress-bar-resta">
+                    <span class="behind" />
+                    <span class="core" />
+                  </div>
+                </div>
+                <div class="fund-now">
+                  <buttonResta
+                    background="yellow"
+                    label="DANAI SEKARANG"
+                    size="14"
+                  />
                 </div>
               </div>
-              <div class="fund-now">
-                <buttonResta
-                  background="yellow"
-                  label='DANAI SEKARANG'
-                  size='14'
-                />
-              </div>
+            </div>
+            <div class="trigger-banner arrow-left" style="left: -45px">
+              <i class="fa fa-arrow-left" aria-hidden="true" />
+            </div>
+            <div class="trigger-banner arrow-right" style="right: -45px">
+              <i class="fa fa-arrow-right" aria-hidden="true" />
             </div>
           </div>
-          <div class="trigger-banner arrow-left" style="left: -45px">
-            <i class="fa fa-arrow-left" aria-hidden="true" />
-          </div>
-          <div class="trigger-banner arrow-right"  style="right: -45px">
-            <i class="fa fa-arrow-right" aria-hidden="true" />
-          </div>
-        </div>
         </div>
         <div class="purple-img">
-          <img :src="purpleImg" />
+          <img :src="purpleImg" alt="purple">
         </div>
       </section>
 
       <section class="news-blog">
         <span class="color-blue fz-36" style="margin-bottom: 30px;">Berita Terbaru</span>
         <div class="blog-list">
-          <div class="info">Business</div>
+          <div class="info">
+            Business
+          </div>
           <div class="content">
             Sebelum Ikut Investasi di Lokasi Ibu Kota Baru, Perhatikan Beberapa Hal Ini!
             <span>9 September 2019</span>
           </div>
           <div class="img-blog">
-            <img src="https://picsum.photos/seed/picsum/200/300" />
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="aaa">
           </div>
         </div>
         <div class="blog-list">
           <div class="img-blog">
-            <img src="https://picsum.photos/seed/picsum/200/300" />
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="test">
           </div>
-          <div class="info" style="background-color:#FFC80A;">GROWTH</div>
+          <div class="info" style="background-color:#FFC80A;">
+            GROWTH
+          </div>
           <div class="content">
             Ibu Kota Pindah, Investasi Properti Bakal Meroket
             <span>10 September 2019</span>
           </div>
         </div>
         <div class="blog-list">
-          <div class="info" style="background-color: #28458F;">INVEST</div>
+          <div class="info" style="background-color: #28458F;">
+            INVEST
+          </div>
           <div class="content">
             Mustika Land Bangun Rumah Rp 200 Jutaan di Cikarang
             <span>9 September 2019</span>
           </div>
           <div class="img-blog">
-            <img src="https://picsum.photos/seed/picsum/200/300" />
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="tesss">
           </div>
         </div>
       </section>
@@ -188,6 +194,7 @@ import buttonResta from '../components/smallComponents/button'
 import bigCircle from '../assets/oval.svg'
 import fundImg from '../assets/fund.svg'
 import purpleImg from '../assets/Mask.svg'
+import defaultImg from '../assets/pretty-home-min.jpg'
 export default {
   components: {
     sliderHome, buttonResta
@@ -234,25 +241,25 @@ export default {
       purpleImg,
       project: [
         {
-          img: 'https://assets0.biggerpockets.com/uploads/wordpress_blog_post/image/9112/pretty-home.jpg',
+          img: defaultImg,
           pendana: '7',
           description: 'AIRY ROOM ECO SYARIAH BSD SERPONG',
           price: 'Rp 800.000.000'
         },
         {
-          img: 'https://assets0.biggerpockets.com/uploads/wordpress_blog_post/image/9112/pretty-home.jpg',
+          img: defaultImg,
           pendana: '12',
           description: 'AIRY ROOM ECO SYARIAH BSD SERPONG',
           price: 'Rp 900.000.000'
         },
         {
-          img: 'https://assets0.biggerpockets.com/uploads/wordpress_blog_post/image/9112/pretty-home.jpg',
+          img: defaultImg,
           pendana: '17',
           description: 'AIRY ROOM ECO SYARIAH BSD SERPONG',
           price: 'Rp 1.900.000.000'
         },
         {
-          img: 'https://assets0.biggerpockets.com/uploads/wordpress_blog_post/image/9112/pretty-home.jpg',
+          img: defaultImg,
           pendana: '34',
           description: 'AIRY ROOM ECO SYARIAH BSD SERPONG',
           price: 'Rp 12.900.000.000'
@@ -266,250 +273,4 @@ export default {
 
 <style lang="scss" scope>
 @import '@/styles/home.scss';
-section {
-  margin: 75px 0;
-}
-.benefit-section {
-  width: 100%;
-  text-align: center;
-  margin: 150px 0;
-  display: inline-block;
-  .heading {
-    height: 110px;
-  }
-  .list-benefit {
-    vertical-align: top;
-    margin: 0 15px;
-    width: 280px;
-    height: 256px;
-    text-align: center;
-    display: inline-block;
-    span {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #28458F;
-      font-weight: bold;
-    }
-    i {
-      display: block;
-      font-size: 56px;
-      color: #FFC80A;
-    }
-    p {
-      font-size: 16px;
-      color: #424242;
-    }
-  }
-}
-.group-info {
-  width: 100%;
-  display: inline-block;
-  .box-info-border {
-    border-radius: 16px;
-    background-color: #FFFFFF;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
-    display: inline-block;
-    padding: 40px 0px;
-  }
-  .content {
-    width: 50%;
-    float: left;
-    display: inline-block;
-    text-align: center;
-    padding: 0px 60px;
-    span {
-    color: #28458F;
-    font-size: 26px;
-    }
-    p {
-    font-size: 18px;
-    color: #424242;
-    margin-bottom: 35px;
-    }
-  }
-  .oval-home {
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    img {
-      position: absolute;
-      bottom: 0;
-    }
-  }
-}
-.compare {
-  // margin-top: 180px;
-  display: inline-block;
-  width: 100%;
-  height: 250px;
-  text-align: center;
-  .head-cont {
-    width: 480px;
-    display: inline-block;
-    margin-bottom: 50px;
-  }
-  .perbadingan {
-    text-align: center;
-    div {
-      display: inline-block;
-      width: calc(100%/4);
-      float: left;
-    }
-  }
-}
-.long-fund {
-  .wrapper-fund {
-    width: 100%;
-    height: 330px;
-    border-radius: 16px;
-    background-color: #FFF4CE;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
-    padding: 70px 100px;
-    .img-fund {
-      width: 40%;
-      display: inline-block;
-      text-align: center;
-      float: left;
-    }
-    .content-fund {
-      width: 60%;
-      float: left;
-      display: inline-block;
-      text-align: center;
-      .wrapper-button {
-        padding-top: 30px;
-      }
-    }
-  }
-}
-.core-project {
-  padding: 0 50px;
-  // position: relative;
-  .project {
-    text-align: left;
-    overflow: scroll;
-    .wrapper-overflow {
-      width: 1300px;
-      display: inline-block;
-    }
-    .card-project {
-      height: 420px;
-      width: 310px;
-      border-radius: 8px;
-      background-color: #FFFFFF;
-      box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
-      display: inline-block;
-      float: left;
-      margin: 0 7px;
-      .img {
-        height: 180px;
-        width: 100%;
-        img {
-          width: 100%;
-          border-radius: 8px;
-        }
-      }
-    }
-    .content {
-      padding: 0 15px;
-      p {
-        font-size: 16px;
-        font-weight: bold;
-        color: #000000;
-      }
-    }
-    .total {
-      margin-top: 15px;
-      padding: 0 15px;
-      width: 100%;
-      height: 60px;
-      display: inline-block;
-
-    }
-    .fund-now {
-      margin-top: 15px;
-      padding: 0 15px;
-    }
-  }
-}
-.progress-bar-resta {
-  position: relative;
-  .behind {
-    width: 100%;
-    position: absolute;
-    height: 20px;
-    background-color: #E6E6E6;
-    z-index: 1;
-    border-radius: 12px;
-  }
-  .core {
-    width: 70%;
-    position: absolute;
-    height: 20px;
-    background: #28458F;
-    border-radius: 12px;
-    z-index: 2;
-  }
-}
-.news-blog {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  span {
-    display: block;
-  }
-  .blog-list {
-    border-radius: 8px;
-    width: 320px;
-    display: inline-block;
-    float: left;
-    margin: 0 25px;
-      .info {
-      height: 30px;
-      width: 100px;
-      border-radius: 15.66px;
-      line-height: 30px;
-      background-color: #288F84;
-      font-size: 12px;
-      text-align: center;
-      color: white;
-      text-transform: uppercase;
-    }
-    .content {
-      font-weight: bold;
-      font-size: 18px;
-      color: #000000;
-      text-align: left;
-      margin: 15px 0;
-      span {
-        color: rgba(0, 0, 0, 0.4);
-        font-size: 12px;
-        text-transform: uppercase;
-        font-weight: 300;
-        margin-top: 15px;
-      }
-    }
-    .img-blog {
-      text-align: left;
-      img {
-        width: 320px;
-        height: 320px;
-        border-radius: 8px;
-      }
-    }
-  }
-}
-.m-a-sm {
-  margin: 15px 0;
-}
-.purple-img {
-  position: absolute;
-  right: 0;
-    img {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-    }
-}
 </style>

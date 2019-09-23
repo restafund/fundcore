@@ -2,27 +2,29 @@
   <div class="footer-wrapper">
     <div class="container">
       <div class="img-footer">
-        <img :src="logo">
+        <img :src="logo" alt="logo">
       </div>
       <div class="list-footer">
         <div v-for="(footer, index) in footerMenu" :key="index" class="list-menu">
           <span>{{ footer.name }}</span>
-          <li v-for="(list, i) in footer.menu" :key="i">
-            <a>{{ list.name }}</a>
-          </li>
+          <ul>
+            <li v-for="(list, i) in footer.menu" :key="i">
+              <a>{{ list.name }}</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="social-media">
         <span>FOLLOW US</span>
-          <div class="icon">
-            <i class="fab fa-facebook-f"></i>
-          </div>
-           <div class="icon">
-            <i class="fab fa-twitter"></i>
-          </div>
-          <div class="icon">
-            <i class="fab fa-linkedin"></i>
-          </div>
+        <div class="icon">
+          <i class="fab fa-facebook-f" />
+        </div>
+        <div class="icon">
+          <i class="fab fa-twitter" />
+        </div>
+        <div class="icon">
+          <i class="fab fa-linkedin" />
+        </div>
       </div>
     </div>
     <div class="legancy">

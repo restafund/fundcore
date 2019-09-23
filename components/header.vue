@@ -1,7 +1,7 @@
 <template>
   <header :class="isheader ? `active-header header` : 'header'">
     <div class="logo-container">
-      <img :src="logo">
+      <img :src="logo" alt="logo">
     </div>
     <ul>
       <li
@@ -68,7 +68,6 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.onScroll)
-    console.log(window.addEventListener('scroll', this.onScroll))
   },
   methods: {
     onScroll (e) {
