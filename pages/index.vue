@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="oval-home">
-          <img :src="bigCircle">
+          <img :src="bigCircle" alt="circle">
         </div>
       </section>
 
@@ -82,7 +82,7 @@
       <section class="long-fund">
         <div class="wrapper-fund">
           <div class="img-fund">
-            <img :src="fundImg">
+            <img :src="fundImg" alt="img">
           </div>
           <div class="content-fund">
             <span class="color-blue fz-36">Tabungan Berjangka</span>
