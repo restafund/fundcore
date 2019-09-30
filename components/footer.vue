@@ -13,17 +13,17 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="social-media">
-        <span>FOLLOW US</span>
-        <div class="icon">
-          <i class="fab fa-facebook-f" />
-        </div>
-        <div class="icon">
-          <i class="fab fa-twitter" />
-        </div>
-        <div class="icon">
-          <i class="fab fa-linkedin" />
+        <div class="social-media">
+          <span>FOLLOW US</span>
+          <div class="icon">
+            <i class="fab fa-facebook-f" />
+          </div>
+          <div class="icon">
+            <i class="fab fa-twitter" />
+          </div>
+          <div class="icon">
+            <i class="fab fa-linkedin" />
+          </div>
         </div>
       </div>
     </div>

@@ -104,3 +104,131 @@
   height: 80px;
   line-height: 80px;
 }
+@media screen and (max-width: 480px) {
+  .circle {
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    bottom: -80px;
+    z-index: -1;
+    img {
+      width: 125px;
+    }
+  }
+  .wrapper-banner {
+    position: relative;
+    margin-top: 65px;
+  }
+  .wallpaper-home {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    .background-home {
+      width: 100%;
+      img {
+        width: 250px;
+        float: right;
+      }
+    }
+    .wallpaper-content {
+      height: 300px;
+      width: 100%;
+      position: absolute;
+      margin: 0;
+      left: auto;
+      right: auto;
+      top: 45px;
+      .content {
+        width: 300px;
+        height: 180px;
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        padding: 15px;
+        span {
+          color: #555555;
+          font-size: 14px;
+        }
+        h1 {
+          color: #28458F;
+          font-weight: 100;
+          font-size: 26px;
+          width: 750px;
+          text-transform: uppercase;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .list-project {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    .box-project {
+      position: relative;
+      display: inline-block;
+      height: 150px;
+      width: 100px;
+      margin: 0 10px;
+      // opacity: 0.5;
+      border-radius: 8px;
+      background-color:rgba(255,255,255,0.5);
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+      text-align: center;
+      .content {
+        opacity: 1;
+        width: 100px;
+        height: 60px;
+        position: absolute;
+        top:0;
+        right:0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+
+        .fz-56 {
+          font-size: 21px;
+        }
+        .fz-20 {
+          font-size: 14px;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  .trigger-banner {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(40,69,143,0.5);
+    text-align: center;
+    line-height: 48px;
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    &:hover {
+      color: #ffffff - 40;
+      background-color: rgba(40,69,143,0.5) - 40;
+    }
+    &.arrow- {
+      &left {
+        left: 30px;
+        margin: 45px 20px 0 5px;
+      }
+      &right {
+        right: 30px;
+        margin: 45px 11px 0 50px;
+      }
+    }
+  }
+  .btn-wraper {
+    display: none;
+    height: 80px;
+    line-height: 80px;
+  }
+}

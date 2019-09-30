@@ -1,6 +1,7 @@
 <template>
   <div class="container-outside">
-    <appHeader />
+    <appHeader v-if="$device.isDesktop || $device.isTablet" />
+    <appHeaderMobile v-else />
     <nuxt />
     <appFooter />
   </div>
@@ -8,9 +9,12 @@
 <script>
 import appHeader from '../components/header'
 import appFooter from '../components/footer'
+import appHeaderMobile from '../components/headerMobile'
 export default {
   components: {
-    appHeader, appFooter
+    appHeader, appFooter, appHeaderMobile
+  },
+  methods: {
   }
 }
 </script>

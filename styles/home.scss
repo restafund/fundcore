@@ -11,15 +11,15 @@
   text-align: center;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+// .title {
+//   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+//     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+//   display: block;
+//   font-weight: 300;
+//   font-size: 100px;
+//   color: #35495e;
+//   letter-spacing: 1px;
+// }
 
 .subtitle {
   font-weight: 300;
@@ -158,6 +158,12 @@ section {
       width: 1300px;
       display: inline-block;
     }
+    .arrow-left-proyek {
+      left: -45px
+    }
+    .arrow-right-proyek {
+      right: -45px
+    }
     .card-project {
       height: 420px;
       width: 310px;
@@ -277,4 +283,292 @@ section {
       bottom: 0;
       z-index: -1;
     }
+}
+
+// Mobile First
+
+@media screen and (max-width: 480px) {
+  section {
+    margin: 75px 0;
+  }
+  .benefit-section {
+    width: 100%;
+    text-align: left;
+    margin: 65px 0;
+    display: inline-block;
+    .heading {
+      height: 60px;
+    }
+    .list-benefit {
+      vertical-align: top;
+      margin: 0;
+      width: 100%;
+      height: auto;
+      text-align: left;
+      padding: 0 15px;
+      display: inline-block;
+      .heading {
+        i {
+          font-size: 32px;
+          display: inline-block;
+        }
+        .m-a-sm {
+          display: inline-block;
+          padding-left: 10px;
+          letter-spacing: 0.2em
+        }
+      }
+      span {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #28458F;
+        font-weight: bold;
+      }
+      i {
+        display: block;
+        font-size: 56px;
+        color: #FFC80A;
+      }
+      p {
+        font-size: 14px;
+        color: #424242;
+        padding-left: 45px;
+      }
+    }
+  }
+  .group-info {
+    width: 100%;
+    display: inline-block;
+    .box-info-border {
+      border-radius: 16px;
+      background-color: #FFFFFF;
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+      display: inline-block;
+      padding: 40px 0px;
+      img {
+        width: 300px;
+      }
+    }
+    .content {
+      width: 100%;
+      float: left;
+      display: inline-block;
+      text-align: center;
+      padding: 0px 15px;
+      margin-bottom: 20px;
+      span {
+      color: #28458F;
+      font-size: 24px;
+      }
+      p {
+      font-size: 14px;
+      color: #424242;
+      margin-bottom: 35px;
+      }
+    }
+    .oval-home {
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      img {
+        position: absolute;
+        bottom: 0;
+        width: 350px;
+      }
+    }
+  }
+  .compare {
+    // margin-top: 180px;
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    .head-cont {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 50px;
+      p {
+        font-size: 24px;
+      }
+    }
+    .perbadingan {
+      text-align: center;
+      display: inline-block;
+      div {
+        display: inline-block;
+        width: 100%;
+        margin: 25px 0;
+      }
+    }
+  }
+  .long-fund {
+    .wrapper-fund {
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      border-radius: 16px;
+      background-color: #FFF4CE;
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+      padding: 15px;
+      .img-fund {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        float: left;
+      }
+      .content-fund {
+        width: 100%;
+        float: left;
+        display: inline-block;
+        text-align: left;
+        .wrapper-button {
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+  .core-project {
+    padding: 0;
+    // position: relative;
+    .project {
+      text-align: left;
+      overflow: scroll;
+      .arrow-left-proyek {
+        left: -20px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+      }
+      .arrow-right-proyek {
+        right: -20px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+      }
+      .wrapper-overflow {
+        width: 1000px;
+        display: inline-block;
+      }
+      .card-project {
+        height: 380px;
+        width: 220px;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+        display: inline-block;
+        float: left;
+        margin: 0 7px;
+        .img {
+          height: 135px;
+          width: 100%;
+          img {
+            width: 100%;
+            border-radius: 8px;
+          }
+        }
+      }
+      .content {
+        padding: 0 15px;
+        p {
+          font-size: 16px;
+          font-weight: bold;
+          color: #000000;
+        }
+      }
+      .total {
+        margin-top: 15px;
+        padding: 0 15px;
+        width: 100%;
+        height: 60px;
+        display: inline-block;
+  
+      }
+      .fund-now {
+        margin-top: 15px;
+        padding: 0 15px;
+      }
+    }
+  }
+  .progress-bar-resta {
+    position: relative;
+    .behind {
+      width: 100%;
+      position: absolute;
+      height: 20px;
+      background-color: #E6E6E6;
+      z-index: 1;
+      border-radius: 12px;
+    }
+    .core {
+      width: 70%;
+      position: absolute;
+      height: 20px;
+      background: #28458F;
+      border-radius: 12px;
+      z-index: 2;
+    }
+  }
+  .news-blog {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    span {
+      display: block;
+    }
+    .blog-list {
+      border-radius: 8px;
+      width: 320px;
+      display: inline-block;
+      float: left;
+      margin: 0;
+        .info {
+        height: 30px;
+        width: 100px;
+        border-radius: 15.66px;
+        line-height: 30px;
+        background-color: #288F84;
+        font-size: 12px;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+      }
+      .content {
+        font-weight: bold;
+        font-size: 18px;
+        color: #000000;
+        text-align: left;
+        margin: 15px 0;
+        span {
+          color: rgba(0, 0, 0, 0.4);
+          font-size: 12px;
+          text-transform: uppercase;
+          font-weight: 300;
+          margin-top: 15px;
+        }
+      }
+      .img-blog {
+        text-align: left;
+        img {
+          width: 320px;
+          height: 320px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  .m-a-sm {
+    margin: 15px 0;
+  }
+  .purple-img {
+    position: absolute;
+    right: 0;
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+  }  
 }

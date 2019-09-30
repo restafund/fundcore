@@ -131,10 +131,10 @@
                 </div>
               </div>
             </div>
-            <div class="trigger-banner arrow-left" style="left: -45px">
+            <div class="trigger-banner arrow-left-proyek">
               <i class="fa fa-arrow-left" aria-hidden="true" />
             </div>
-            <div class="trigger-banner arrow-right" style="right: -45px">
+            <div class="trigger-banner arrow-right-proyek">
               <i class="fa fa-arrow-right" aria-hidden="true" />
             </div>
           </div>
@@ -159,7 +159,7 @@
           </div>
         </div>
         <div class="blog-list">
-          <div class="img-blog">
+          <div class="img-blog hidden-xs">
             <img src="https://picsum.photos/seed/picsum/200/300" alt="test">
           </div>
           <div class="info" style="background-color:#FFC80A;">
@@ -168,6 +168,9 @@
           <div class="content">
             Ibu Kota Pindah, Investasi Properti Bakal Meroket
             <span>10 September 2019</span>
+          </div>
+          <div class="img-blog hidden-md">
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="test">
           </div>
         </div>
         <div class="blog-list">
@@ -220,12 +223,12 @@ export default {
           description: 'Investor dapat mengunjungi lokasi proyek kapanpun dan memantau kondisi proyek secara langsung.'
         },
         {
-          icon: 'fa fa-shield',
+          icon: 'fas fa-shield-alt',
           name: 'AMAN',
           description: 'Properti yang dijaminkan ataupun dijual lagi adalah bersertifikat dan telah dicek oleh BPN dan KRK nya.'
         },
         {
-          icon: 'fa fa-diamond',
+          icon: 'far fa-gem',
           name: 'UNTUNG',
           description: 'Tingkat imbal hasil menarik yang saling menguntungkan antara Pendana dan Peminjam.'
         },

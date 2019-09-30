@@ -14,7 +14,7 @@
 }
 .list-footer {
     display: inline-block;
-    width: 45%;
+    width: 65%;
     float: left;
   .list-menu {
     width: 150px;
@@ -42,7 +42,7 @@
 .social-media {
   width: 20%;
   display: inline-block;
-  float: left;
+  float: right;
   span {
     width: 100%;
     display: inline-block;
@@ -61,5 +61,79 @@
   span {
     color: rgba(108,108,108,0.5);
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-wrapper {
+    width: 100%;
+    display: inline-block;
+    background-color: #F9F9F9;
+    .container {
+      padding: 30px 20px 40px 20px;
+    }
+  }
+  .img-footer {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    text-align: center;
+  }
+  .list-footer {
+      display: inline-block;
+      width: 100%;
+      float: left;
+    .list-menu {
+      width: 50%;
+      text-align: left;
+      float: left;
+      line-height: 25px;
+      margin-top: 60px;
+      ul {
+        padding: 0;
+      }
+      span {
+        color: #292929;
+        font-size: 12px;
+        letter-spacing: 0.2em
+      }
+      display: inline-block;
+      li {
+        font-size: 14px;
+        list-style-type: none;
+        color: #6C6C6C;
+        margin: 10px 0;
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .social-media {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    margin-top:60px;
+    text-align: left;
+    span {
+      width: 100%;
+      font-size: 12px;
+      display: inline-block;
+    }
+    .icon {
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+    }
+  }
+  .legancy {
+    border-top: 2px solid #6C6C6C;
+    height: 78px;
+    line-height: 78px;
+    text-align: center;
+    span {
+      color: rgba(108,108,108,0.5);
+      font-size: 12px;
+    }
   }
 }

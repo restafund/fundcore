@@ -29,7 +29,7 @@
       <div v-for="(list, index) in project" :key="index" class="box-project">
         <div class="content">
           <span class="fz-56 color-blue f-bold ">{{ list.value }}</span>
-          <span class="fx-20 color-gray">{{ list.name }}</span>
+          <span class="fz-20 color-gray">{{ list.name }}</span>
         </div>
       </div>
       <div class="circle">
