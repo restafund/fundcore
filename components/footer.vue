@@ -3,6 +3,13 @@
     <div class="container">
       <div class="img-footer">
         <img :src="logo" alt="logo">
+        <p>
+        Jl. Jend. Sudirman Kav. 52-53,<br>
+        Indonesia Stock Exchange Tower 2, 17th floor, Jakarta Selatan<br>
+        admin@restafund.com<br>
+        HOTLINE: 021-5291 7474<br>
+        WA: 0813 8486 8080 / 081 871 9090<br>
+        </p>
       </div>
       <div class="list-footer">
         <div v-for="(footer, index) in footerMenu" :key="index" class="list-menu">

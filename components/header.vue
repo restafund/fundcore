@@ -1,7 +1,9 @@
 <template>
   <header :class="isheader ? `active-header header` : 'header'">
     <div class="logo-container">
-      <img :src="logo" alt="logo">
+      <nuxt-link to="/">
+        <img :src="logo" alt="logo">
+      </nuxt-link>
     </div>
     <ul>
       <li
@@ -9,19 +11,12 @@
         @click="isOpen = !isOpen
                 active = !active"
       >
-        <a>
+        <nuxt-link to="/listProduct">
           PRODUK
-          <i class="fa fa-chevron-down" aria-hidden="true" />
-          <div :class="{ isOpen }" class="dropdown">
-            <ul>
-              <li>dasd</li>
-              <li>asda</li>
-            </ul>
-          </div>
-        </a>
+        </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/about">
+        <nuxt-link to="/listProduct">
           PEMINJAM
         </nuxt-link>
       </li>
@@ -78,6 +73,13 @@ export default {
         this.isheader = false
       }
     }
+    // <i class="fa fa-chevron-down" aria-hidden="true" />
+    // <div :class="{ isOpen }" class="dropdown">
+    //   <ul>
+    //     <li>dasd</li>
+    //     <li>asda</li>
+    //   </ul>
+    // </div>
   }
 }
 </script>
