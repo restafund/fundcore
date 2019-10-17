@@ -1,86 +1,87 @@
 <template>
-    <div class="container layout-container">
-        <section class="product-section">
-            <div class="img-banner">
-                <img :src="product1">
-            </div>
-            <div class="content-product">
-                <div class="content">
-                    <span>PRODUCT</span>
-                    <h2>FUN DEVELOP</h2>
-                    <p>
-                        Fund Development adalah pendanaan yang membantu para developer atau pemilik lahan atau pemilik proyek untuk membangun perumahan atau komersil yang sudah punya IMB dan siap dibangun.
-                    </p>
-                    <buttonResta
-                    background="yellow"
-                    label="SELENGKAPNYA"
-                    size="14"
-                    />
-                </div>
-                <span class="bg-number">01</span>
-            </div>
-        </section>
-        <section class="product-section">
-            <div class="content-product">
-                <div class="content">
-                    <span>PRODUCT</span>
-                    <h2>FUN GADAI</h2>
-                    <p>
-                        Fund Gadai adalah pendanaan yang membantu para pemilik properti yang Butuh Uang Cepat dengan jaminan properti bersertifikat
-                    </p>
-                    <buttonResta
-                    background="yellow"
-                    label="SELENGKAPNYA"
-                    size="14"
-                    />
-                </div>
-                <span class="bg-number">02</span>
-            </div>
-            <div class="img-banner">
-                <img :src="p2">
-            </div>
-        </section>
-        <section class="product-section">
-            <div class="img-banner">
-                <img :src="p3">
-            </div>
-            <div class="content-product">
-                <div class="content">
-                    <span>PRODUCT</span>
-                    <h2>FUN FLIP</h2>
-                    <p>
-                        Fund Flip adalah pendanaan untuk membantu para pemilik properti yang Butuh Jual Cepat dengan harga dibawah NJOP atau maksimal 70% dari harga pasar.
-                    </p>
-                    <buttonResta
-                    background="yellow"
-                    label="SELENGKAPNYA"
-                    size="14"
-                    />
-                </div>
-                <span class="bg-number">03</span>
-            </div>
-        </section>
-        <section class="product-section">
-            <div class="content-product">
-                <div class="content">
-                    <span>PRODUCT</span>
-                    <h2>FUN INCOME</h2>
-                    <p>
-                        Fund Income adalah crowdfunding untuk proyek jangka panjang seperti kost, hotel, foodcourt, lahan parkir, komersil, coworking space, coliving, dan properti yang produktif
-                    </p>
-                    <buttonResta
-                    background="yellow"
-                    label="SELENGKAPNYA"
-                    size="14"
-                    />
-                </div>
-                <span class="bg-number">04</span>
-            </div>
-            <div class="img-banner">
-                <img :src="p4">
-            </div>
-        </section>
-    </div>
+  <div class="container layout-container">
+    <section class="product-section">
+      <div class="img-banner">
+        <img :src="product1">
+      </div>
+      <div class="content-product">
+        <div class="content">
+          <span>PRODUCT</span>
+          <h2>FUN DEVELOP</h2>
+          <p>
+            Fund Development adalah pendanaan yang membantu para developer atau pemilik lahan atau pemilik proyek untuk membangun perumahan atau komersil yang sudah punya IMB dan siap dibangun.
+          </p>
+          <buttonResta
+            background="yellow"
+            label="SELENGKAPNYA"
+            size="14"
+            @click="nextPage"
+          />
+        </div>
+        <span class="bg-number">01</span>
+      </div>
+    </section>
+    <section class="product-section">
+      <div class="content-product">
+        <div class="content">
+          <span>PRODUCT</span>
+          <h2>FUN GADAI</h2>
+          <p>
+            Fund Gadai adalah pendanaan yang membantu para pemilik properti yang Butuh Uang Cepat dengan jaminan properti bersertifikat
+          </p>
+          <buttonResta
+            background="yellow"
+            label="SELENGKAPNYA"
+            size="14"
+          />
+        </div>
+        <span class="bg-number">02</span>
+      </div>
+      <div class="img-banner">
+        <img :src="p2">
+      </div>
+    </section>
+    <section class="product-section">
+      <div class="img-banner">
+        <img :src="p3">
+      </div>
+      <div class="content-product">
+        <div class="content">
+          <span>PRODUCT</span>
+          <h2>FUN FLIP</h2>
+          <p>
+            Fund Flip adalah pendanaan untuk membantu para pemilik properti yang Butuh Jual Cepat dengan harga dibawah NJOP atau maksimal 70% dari harga pasar.
+          </p>
+          <buttonResta
+            background="yellow"
+            label="SELENGKAPNYA"
+            size="14"
+          />
+        </div>
+        <span class="bg-number">03</span>
+      </div>
+    </section>
+    <section class="product-section">
+      <div class="content-product">
+        <div class="content">
+          <span>PRODUCT</span>
+          <h2>FUN INCOME</h2>
+          <p>
+            Fund Income adalah crowdfunding untuk proyek jangka panjang seperti kost, hotel, foodcourt, lahan parkir, komersil, coworking space, coliving, dan properti yang produktif
+          </p>
+          <buttonResta
+            background="yellow"
+            label="SELENGKAPNYA"
+            size="14"
+          />
+        </div>
+        <span class="bg-number">04</span>
+      </div>
+      <div class="img-banner">
+        <img :src="p4">
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -98,6 +99,13 @@ export default {
   data () {
     return {
       product1, p2, p3, p4
+    }
+  },
+  methods: {
+    nextPage () {
+      this.$router.push({
+        path: '/productDetail'
+      })
     }
   }
 }

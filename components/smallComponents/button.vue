@@ -52,5 +52,9 @@ export default {
   border: none;
   padding: 0 40px;
 }
+button {
+  cursor: pointer;
+  outline: none;
+}
 
 </style>
