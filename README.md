@@ -38,4 +38,23 @@ Invest more, get more. We will build this web like build house for our family.
 Not Yet..
 ```
 
+### Use NVM for node version v10.12.00
+Intall NVM with this script
+```
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+```
+Restar Terminal then setup nvm
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+```
+select Node version 
+
+```
+nvm install v10.12.00
+```
+
+Happy Code !!!!
+
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

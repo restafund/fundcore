@@ -15,7 +15,7 @@
             background="yellow"
             label="SELENGKAPNYA"
             size="14"
-            @click="nextPage"
+            @click="nextPage('fun-develop')"
           />
         </div>
         <span class="bg-number">01</span>
@@ -33,6 +33,7 @@
             background="yellow"
             label="SELENGKAPNYA"
             size="14"
+            @click="nextPage('fun-gadai')"
           />
         </div>
         <span class="bg-number">02</span>
@@ -56,6 +57,7 @@
             background="yellow"
             label="SELENGKAPNYA"
             size="14"
+            @click="nextPage('fun-flip')"
           />
         </div>
         <span class="bg-number">03</span>
@@ -73,6 +75,7 @@
             background="yellow"
             label="SELENGKAPNYA"
             size="14"
+            @click="nextPage('fun-income')"
           />
         </div>
         <span class="bg-number">04</span>
@@ -102,9 +105,9 @@ export default {
     }
   },
   methods: {
-    nextPage () {
+    nextPage (link) {
       this.$router.push({
-        path: '/productDetail'
+        path: '/listProduct/' + link
       })
     }
   }

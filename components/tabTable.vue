@@ -52,7 +52,7 @@
 
 <script>
 export default {
-  name: 'table component'
+  name: 'TableComponent'
 }
 </script>
 

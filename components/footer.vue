@@ -16,7 +16,7 @@
           <span>{{ footer.name }}</span>
           <ul>
             <li v-for="(list, i) in footer.menu" :key="i">
-              <a>{{ list.name }}</a>
+              <a @click="nextPage(list.slug)" >{{ list.name }}</a>
             </li>
           </ul>
         </div>
@@ -50,10 +50,10 @@ export default {
         {
           name: 'PRODUCT',
           menu: [
-            { name: 'Fun Develop' },
-            { name: 'Fun Income' },
-            { name: 'Fun Gadai' },
-            { name: 'Fun Flip' }
+            { name: 'Fun Develop', slug: 'fun-develop' },
+            { name: 'Fun Income', slug: 'fun-income' },
+            { name: 'Fun Gadai', slug: 'fun-gadai' },
+            { name: 'Fun Flip', slug: 'fun-flip' }
           ]
         },
         {
@@ -75,6 +75,13 @@ export default {
           ]
         }
       ]
+    }
+  },
+  methods: {
+    nextPage (link) {
+      this.$router.push({
+        path: '/listProduct/' + link
+      })
     }
   }
 }

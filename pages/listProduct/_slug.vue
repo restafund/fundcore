@@ -2,11 +2,11 @@
   <div class="container">
     <section class="product-detail">
       <div class="content-detail">
-        <h1>FUN DEVELOP</h1>
-        <p>Fund Development adalah pendanaan yang membantu para developer atau pemilik lahan atau pemilik proyek untuk membangun perumahan atau komersil yang sudah punya IMB dan siap dibangun.</p>
+        <h1>{{ title }}</h1>
+        <p>{{ content }}</p>
         <buttonResta
           background="yellow"
-          label="AJUKAN FUN DEVELOP"
+          :label=button
           size="14"
         />
       </div>
@@ -17,10 +17,10 @@
     <section class="tab-wrapper">
       <div class="head-tab">
         <ul>
-          <li class="active">FUN DEVELOP</li>
-          <li>FUN GADAI</li>
-          <li>FUN FLIP</li>
-          <li>FUN INCOME</li>
+          <li @click="nextPage('fun-develop')" :class="this.$route.params.slug === 'fun-develop' ? 'active' : '' ">FUN DEVELOP</li>
+          <li @click="nextPage('fun-gadai')"  :class="this.$route.params.slug === 'fun-gadai' ? 'active' : '' ">FUN GADAI</li>
+          <li @click="nextPage('fun-flip')" :class="this.$route.params.slug === 'fun-flip' ? 'active' : '' ">FUN FLIP</li>
+          <li @click="nextPage('fun-income')"  :class="this.$route.params.slug === 'fun-income' ? 'active' : '' ">FUN INCOME</li>
         </ul>
       </div>
       <div class="body-tab">
@@ -69,6 +69,13 @@ export default {
   components: {
     buttonResta, TableComponent, CardNotif
   },
+  asyncData ({ params, env, error }) {
+    const user = env.users.find(user => String(user.slug) === params.slug)
+    if (!user) {
+      return error({ message: 'User not found', statusCode: 404 })
+    }
+    return user
+  },
   data () {
     return {
       wallpaper,
@@ -79,16 +86,6 @@ export default {
       Document,
       Report,
       SPK,
-      env: {
-        users: [
-          { id: 1, name: 'Kobe Bryant', number: 24 },
-          { id: 2, name: 'Michael Jordan', number: 23 },
-          { id: 3, name: 'Stephen Curry', number: 30 },
-          { id: 4, name: 'Lebron James', number: 23 },
-          { id: 5, name: 'Kevin Durant', number: 35 },
-          { id: 6, name: 'Kyrie Irving', number: 2 }
-        ]
-      },
       work: [
         { id: '01', content: 'Semua proyek akan melalui tahap appraisal oleh KJPP rekanan untuk dicek Ketetapan Rencana Kota, studi kelayakan, presentasi kepada Komite Restafund dan kemampuan team sales proyek tersebut' },
         { id: '02', content: 'Proyek yang lolos seleksi akan di tampilkan untuk siap didanai' },
@@ -104,6 +101,16 @@ export default {
         { img: Report, content: 'Laporan Keuangan 2 tahun terakhir' },
         { img: SPK, content: 'Surat Perintah Kerja (SPK)' }
       ]
+    }
+  },
+  mounted () {
+    console.log(this.$route)
+  },
+  methods: {
+    nextPage (link) {
+      this.$router.push({
+        path: '/listProduct/' + link
+      })
     }
   }
 }
