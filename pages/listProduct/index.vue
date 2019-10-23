@@ -164,4 +164,56 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+  .product-section {
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    .img-banner {
+        width: 100%;
+        display: inline-block;
+        float: left;
+        img {
+            width: 100%;
+        }
+    }
+    .content-product {
+        width: 100%;
+        display: inline-block;
+        float: left;
+        position: relative;
+        .bg-number {
+            font-size: 350px;
+            color: #EEEEEE;
+            position: absolute;
+            top: -125px;
+            height: 100px;
+            font-weight: bold;
+            left: -30px;
+            z-index: -1;
+        }
+        .content {
+            width: 100%;
+            display: inline-block;
+            float: right;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: left;
+            span {
+                color: #888888;
+                font-size: 12px;
+            }
+            p {
+                font-size: 16px;
+                color: #444444;
+                margin-bottom: 20px;
+            }
+            h2 {
+                margin: 14px 0;
+            }
+        }
+    }
+}
+}
 </style>

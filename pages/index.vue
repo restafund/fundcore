@@ -28,6 +28,7 @@
               background="yellow"
               label="PELAJARI LEBIH LANJUT"
               size="14"
+              @click="nextPage"
             />
           </div>
           <div class="content">
@@ -37,6 +38,7 @@
               background="blue"
               label="PELAJARI LEBIH LANJUT"
               size="14"
+              @click="nextPage"
             />
           </div>
         </div>
@@ -269,6 +271,13 @@ export default {
         }
       ],
       windowTop: ''
+    }
+  },
+  methods: {
+    nextPage (link) {
+      this.$router.push({
+        path: '/listProduct/'
+      })
     }
   }
 }

@@ -16,7 +16,7 @@
           <span>{{ footer.name }}</span>
           <ul>
             <li v-for="(list, i) in footer.menu" :key="i">
-              <a @click="nextPage(list.slug)" >{{ list.name }}</a>
+              <a @click="nextPage(list.slug)">{{ list.name }}</a>
             </li>
           </ul>
         </div>

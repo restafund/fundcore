@@ -94,4 +94,45 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .wrapper-table {
+    padding: 30px;
+    section {
+      border-top: 1px solid #E1E1E1;
+      text-align: left;
+      margin: 0;
+      display: inline-block;
+      width: 100%;
+      min-height: 60px;
+      padding: 30px 0;
+      .left {
+        width: 30%;
+        display: inline-block;
+        float: left;
+        h2 {
+          font-weight: 300;
+          color: #28458F;
+          font-size: 18px;
+        }
+      }
+      .right {
+        width: 60%;
+        display: inline-block;
+        float: left;
+        p {
+          font-size: 16px;
+          color: #424242;
+        }
+        .col-6 {
+          width: 100%;
+          display: inline-block;
+          float: left;
+          margin-bottom: 10px;
+          min-height: 150px;
+        }
+      }
+    }
+  }
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
-    <div class="wrapper green">
-        {{ label }}
-    </div>
+  <div class="wrapper green">
+    {{ label }}
+  </div>
 </template>
 
 <script>

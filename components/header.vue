@@ -11,9 +11,35 @@
         @click="isOpen = !isOpen
                 active = !active"
       >
-        <nuxt-link to="/listProduct">
+        <a>
           PRODUK
-        </nuxt-link>
+          <i v-if="isOpen" class="fa fa-chevron-up" aria-hidden="true" />
+          <i v-else class="fa fa-chevron-down" aria-hidden="true" />
+        </a>
+        <transition name="slide-fade">
+          <div v-if="isOpen" class="dropdown isOpen">
+            <div @click="show = !show">
+              <nuxt-link to="/listProduct/fun-develop">
+                FUN DEVELOP
+              </nuxt-link>
+            </div>
+            <div @click="show = !show">
+              <nuxt-link to="/listProduct/fun-gadai">
+                FUN GADAI
+              </nuxt-link>
+            </div>
+            <div @click="show = !show">
+              <nuxt-link to="/listProduct/fun-flip">
+                FUN FLIP
+              </nuxt-link>
+            </div>
+            <div @click="show = !show">
+              <nuxt-link to="/listProduct/fun-income">
+                FUN INCOME
+              </nuxt-link>
+            </div>
+          </div>
+        </transition>
       </li>
       <li>
         <nuxt-link to="/listProduct">
@@ -105,6 +131,10 @@ export default {
   ul {
     display: flex;
     list-style: none;
+    position: relative;
+    li {
+      cursor: pointer;
+    }
   }
   a {
     display: inline-block;
@@ -136,21 +166,46 @@ export default {
   }
 }
 .dropdown {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%) rotatex(90deg) scale(0);
-  margin-top: 0.55em;
-  transform-origin: 0 0;
-  border-radius: 0.35em;
-  background-color: rgba(black, 0.15);
-  visibility: hidden;
-  opacity: 0;
+  // position: absolute;
+  // left: 50%;
+  // transform: translatex(-50%) rotatex(90deg) scale(0);
+  // margin-top: 0.55em;
+  // transform-origin: 0 0;
+  // border-radius: 0.35em;
+  // background-color: rgba(black, 0.15);
+  // visibility: hidden;
+  // opacity: 0;
   transition: all 200ms linear;
 
   &.isOpen {
-    transform: translatex(-50%);
-    visibility: visible;
-    opacity: 1;
+    // transform: translatex(-50%);
+    // visibility: visible;
+    // opacity: 1;
+    div {
+    height: 40px;
+    line-height: 40px;
   }
+  }
+  position: absolute;
+  box-sizing: border-box;
+  width: 232px;
+  border: 1px solid #D6D6D6;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  top: 45px;
+  left: 20px;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

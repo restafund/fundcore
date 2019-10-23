@@ -4,7 +4,9 @@
       <i class="fas fa-bars" @click="show = !show" />
     </div>
     <div class="logo-container">
-      <img :src="logo" alt="logo">
+      <nuxt-link to="/">
+        <img :src="logo" alt="logo">
+      </nuxt-link>
     </div>
     <div class="border-circle">
       <nuxt-link to="/joke">
@@ -14,20 +16,37 @@
     <transition name="slide-fade">
       <ul v-if="show">
         <li
-          :class="{ active }"
-          @click="isOpen = !isOpen
-                  active = !active"
+          @click="drop = !drop"
         >
           <a>
             PRODUK
-            <i class="fa fa-chevron-down" aria-hidden="true" />
-            <div :class="{ isOpen }" class="dropdown">
-              <ul>
-                <li>dasd</li>
-                <li>asda</li>
-              </ul>
-            </div>
+            <i v-if="drop" class="fa fa-chevron-up" aria-hidden="true" />
+            <i v-else class="fa fa-chevron-down" aria-hidden="true" />
           </a>
+          <transition name="slide-fade">
+            <div v-if="drop" class="dropdown-mobile isOpen">
+              <div @click="show = !show">
+                <nuxt-link to="/listProduct/fun-develop">
+                  FUN DEVELOP
+                </nuxt-link>
+              </div>
+              <div @click="show = !show">
+                <nuxt-link to="/listProduct/fun-gadai">
+                  FUN GADAI
+                </nuxt-link>
+              </div>
+              <div @click="show = !show">
+                <nuxt-link to="/listProduct/fun-flip">
+                  FUN FLIP
+                </nuxt-link>
+              </div>
+              <div @click="show = !show">
+                <nuxt-link to="/listProduct/fun-income">
+                  FUN INCOME
+                </nuxt-link>
+              </div>
+            </div>
+          </transition>
         </li>
         <li>
           <nuxt-link to="/about">
@@ -70,7 +89,8 @@ export default {
       isOpen: false,
       active: false,
       isheader: false,
-      show: false
+      show: false,
+      drop: false
     }
   },
   mounted () {
@@ -110,6 +130,7 @@ export default {
     color: #526488;
   }
   ul {
+    padding: 0;
     width: 275px;
     display: inline-block;
     list-style: none;
@@ -120,6 +141,9 @@ export default {
     height: 100vh;
     border-right: solid 1px #d3d3d3;
     li {
+      position: relative;
+      display: inline-block;
+      width: 100%;
       a {
         width: 100%;
         height: 50px;
@@ -168,28 +192,40 @@ export default {
 }
 .logo-container {
   padding: 0 15px;
-  margin-right: 65px;
+  margin-right: 30px;
   img {
     height: 30px;
     width: 132px;
   }
 }
-.dropdown {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%) rotatex(90deg) scale(0);
+.dropdown-mobile {
+  // position: absolute;
+  display: inline-block;
+  border-radius: 0;
+  position: relative;
+  width: 100%;
+  top: 50%;
+  transform: translateX(-50%) rotatex(90deg) scale(0);
   margin-top: 0.55em;
   transform-origin: 0 0;
   border-radius: 0.35em;
-  background-color: rgba(black, 0.15);
-  visibility: hidden;
+  background-color: #F9F9F9;
+  display: none;
   opacity: 0;
   transition: all 200ms linear;
 
   &.isOpen {
-    transform: translatex(-50%);
-    visibility: visible;
+    transform: translatey(0%);
+    display: inline-block;
     opacity: 1;
+    border-radius: 0px;
+  }
+  div {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px;
+    text-transform: capitalize;
+    font-size: 16px;
   }
 }
 .slide-fade-enter-active {
@@ -205,5 +241,17 @@ export default {
 }
 .black-screen {
 
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
