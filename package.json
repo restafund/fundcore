@@ -5,7 +5,7 @@
   "author": "Dio adhita saputra",
   "private": true,
   "engines": {
-    "node": "12.13.0"
+    "node": "10.13.0"
   },
   "scripts": {
     "dev": "nuxt",
@@ -25,6 +25,7 @@
     "node-sass": "^4.12.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.0",
+    "semantic-ui": "^2.4.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {
