@@ -14,7 +14,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "semantik": "cd semantic && gulp build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build && npm run semantik"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
