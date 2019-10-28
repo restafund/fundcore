@@ -51,7 +51,7 @@ export NVM_DIR="$HOME/.nvm"
 select Node version 
 
 ```
-nvm install v10.12.00
+nvm install v10.13.0
 ```
 
 Happy Code !!!!

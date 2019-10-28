@@ -52,12 +52,12 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/joke">
+        <nuxt-link to="/project">
           PROYEK
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/joke">
+        <nuxt-link to="/portfolio">
           PORTFOLIO
         </nuxt-link>
       </li>

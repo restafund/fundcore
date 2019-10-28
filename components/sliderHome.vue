@@ -5,7 +5,7 @@
         <img :src="bgOne" alt="big">
       </div>
       <div class="wallpaper-content">
-        <div class="content">
+        <div class="content-list">
           <span class="fz-14">RESTAFUND PROJECTS</span>
           <h1 class="fz-56">
             Semua Orang Bisa Berinvestasi
@@ -27,8 +27,8 @@
     </div>
     <div class="list-project">
       <div v-for="(list, index) in project" :key="index" class="box-project">
-        <div class="content">
-          <span class="fz-56 color-blue f-bold ">{{ list.value }}</span>
+        <div class="content-list">
+          <span class="fz-56 color-blue">{{ list.value }}</span>
           <span class="fz-20 color-gray">{{ list.name }}</span>
         </div>
       </div>

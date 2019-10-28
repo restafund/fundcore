@@ -37,7 +37,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '~/semantic/dist/semantic.min.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
