@@ -14,7 +14,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "semantik": "cd semantic && gulp build",
-    "heroku-postbuild": "npm run build && npm run semantik"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
@@ -25,7 +25,6 @@
     "node-sass": "^4.12.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.0",
-    "semantic-ui": "^2.4.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {
