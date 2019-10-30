@@ -79,4 +79,9 @@ export default {
   font-size: 12px;
   color: #A3A3A3;
 }
+@media screen and (max-width: 480px) {
+  .login {
+    width: 100%;
+  }
+}
 </style>
