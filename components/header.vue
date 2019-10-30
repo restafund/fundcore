@@ -62,12 +62,12 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/joke">
+        <nuxt-link to="/login">
           MASUK
         </nuxt-link>
       </li>
       <li class="border-circle">
-        <nuxt-link to="/joke">
+        <nuxt-link to="/register">
           DAFTAR
         </nuxt-link>
       </li>
