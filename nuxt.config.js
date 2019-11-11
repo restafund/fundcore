@@ -11,10 +11,16 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { property: 'og:title', content: 'short title of your website/webpage' },
+      { property: 'og:url', content: 'https:/dioadhita.com/' },
+      { property: 'og:description', content: 'Biarkan Properti Kamu Bekerja Untuk Kamu' },
+      { property: 'og:image', content: 'https://restafund.com/wp-content/uploads/2019/07/restafundlogo2.png' },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:locale', content: 'en_GB' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || 'Bergotong royong mendanai usaha Anda atau proyek Anda dengan jaminan properti.'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', src: './favicon.ico' }],
