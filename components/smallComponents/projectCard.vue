@@ -52,6 +52,10 @@ export default {
   height: 420px;
   width: (100%/ 4);
   float: left;
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    margin: 15px 0;
+  }
 }
 .card-project {
   border-radius: 8px;

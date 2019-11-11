@@ -40,6 +40,10 @@ export default {
   padding: 15px;
   display: inline-block;
   width: (100% / 3);
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    margin: 15px 0;
+  }
 }
 .container-cards {
     min-height: 350px;

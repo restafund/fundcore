@@ -54,7 +54,10 @@
           </p>
         </div>
         <div class="perbadingan">
-          <div class="calculate">
+          <div class="chart">
+            <img :src="Chart">
+          </div>
+          <!-- <div class="calculate">
             <span class="color-blue fz-36">1.32%</span>
             <p class="color-gray fz-18">
               Tanah, tabungan
@@ -77,28 +80,7 @@
             <p class="color-gray fz-18">
               Restafund
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="long-fund">
-        <div class="wrapper-fund">
-          <div class="img-fund">
-            <img :src="fundImg" alt="img">
-          </div>
-          <div class="content-fund">
-            <span class="color-blue fz-36">Tabungan Berjangka</span>
-            <p class="color-gray fz-16">
-              Cooking Healthy For Radiant Health
-            </p>
-            <div class="wrapper-button">
-              <buttonResta
-                background="yellow"
-                label="MULAI MENABUNG"
-                size="14"
-              />
-            </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -143,6 +125,27 @@
         </div>
         <div class="purple-img">
           <img :src="purpleImg" alt="purple">
+        </div>
+      </section>
+
+      <section class="long-fund">
+        <div class="wrapper-fund">
+          <div class="img-fund">
+            <img :src="fundImg" alt="img">
+          </div>
+          <div class="content-fund">
+            <span class="color-blue fz-36">Tabungan Berjangka</span>
+            <p class="color-gray fz-16">
+              Cooking Healthy For Radiant Health
+            </p>
+            <div class="wrapper-button">
+              <buttonResta
+                background="yellow"
+                label="MULAI MENABUNG"
+                size="14"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -194,6 +197,7 @@
 
 <script>
 import sliderHome from '../components/sliderHome'
+import Chart from '../assets/charts.svg'
 import groupInfo from '../assets/groupShare.svg'
 import buttonResta from '../components/smallComponents/button'
 import bigCircle from '../assets/oval.svg'
@@ -243,6 +247,7 @@ export default {
       groupInfo,
       bigCircle,
       fundImg,
+      Chart,
       purpleImg,
       project: [
         {
