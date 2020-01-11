@@ -1,9 +1,9 @@
 <template>
   <div class="container layout-container">
     <section class="product-section">
-      <div class="img-banner">
+      <!-- <div class="img-banner">
         <img :src="product1">
-      </div>
+      </div> -->
       <div class="content-product">
         <div class="content">
           <span>PRODUCT</span>
@@ -12,7 +12,7 @@
             Fund Development adalah pendanaan yang membantu para developer atau pemilik lahan atau pemilik proyek untuk membangun perumahan atau komersil yang sudah punya IMB dan siap dibangun.
           </p>
           <buttonResta
-            background="yellow"
+            background="white"
             label="SELENGKAPNYA"
             size="14"
             @click="nextPage('fun-develop')"
@@ -30,7 +30,7 @@
             Fund Gadai adalah pendanaan yang membantu para pemilik properti yang Butuh Uang Cepat dengan jaminan properti bersertifikat
           </p>
           <buttonResta
-            background="yellow"
+            background="white"
             label="SELENGKAPNYA"
             size="14"
             @click="nextPage('fun-gadai')"
@@ -38,14 +38,14 @@
         </div>
         <span class="bg-number">02</span>
       </div>
-      <div class="img-banner">
+      <!-- <div class="img-banner">
         <img :src="p2">
-      </div>
+      </div> -->
     </section>
     <section class="product-section">
-      <div class="img-banner">
+      <!-- <div class="img-banner">
         <img :src="p3">
-      </div>
+      </div> -->
       <div class="content-product">
         <div class="content">
           <span>PRODUCT</span>
@@ -54,7 +54,7 @@
             Fund Flip adalah pendanaan untuk membantu para pemilik properti yang Butuh Jual Cepat dengan harga dibawah NJOP atau maksimal 70% dari harga pasar.
           </p>
           <buttonResta
-            background="yellow"
+            background="white"
             label="SELENGKAPNYA"
             size="14"
             @click="nextPage('fun-flip')"
@@ -72,7 +72,7 @@
             Fund Income adalah crowdfunding untuk proyek jangka panjang seperti kost, hotel, foodcourt, lahan parkir, komersil, coworking space, coliving, dan properti yang produktif
           </p>
           <buttonResta
-            background="yellow"
+            background="white"
             label="SELENGKAPNYA"
             size="14"
             @click="nextPage('fun-income')"
@@ -80,9 +80,9 @@
         </div>
         <span class="bg-number">04</span>
       </div>
-      <div class="img-banner">
+      <!-- <div class="img-banner">
         <img :src="p4">
-      </div>
+      </div> -->
     </section>
   </div>
 </template>
@@ -115,12 +115,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section {
+  &.product-section {
+    margin: 20px 0;
+  }
+}
 .product-section {
-    padding: 40px 0;
+    // padding: 40px 0;
+    height: 350px;
     display: inline-block;
-    width: 100%;
+    width: 50%;
+    float: left;
     .img-banner {
-        width: 50%;
+        width: 100%;
         display: inline-block;
         float: left;
         img {
@@ -128,18 +135,18 @@ export default {
         }
     }
     .content-product {
-        width: 50%;
+        width: 100%;
         display: inline-block;
         float: left;
         position: relative;
         .bg-number {
-            font-size: 427px;
+            font-size: 140px;
             color: #EEEEEE;
             position: absolute;
-            top: -125px;
+            top: -20px;
+            left: 30px;
             height: 100px;
             font-weight: bold;
-            left: -30px;
             z-index: -1;
         }
         .content {

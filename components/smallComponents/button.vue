@@ -52,6 +52,16 @@ export default {
   border: none;
   padding: 0 40px;
 }
+.white {
+  height: 48px;
+  min-width: 200px;
+  border-radius: 49.5px;
+  background-color: #F1F1F1;
+  color:#28458F;
+  font-size: 12px;
+  border: none;
+  padding: 0 40px;
+}
 button {
   cursor: pointer;
   outline: none;

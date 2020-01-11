@@ -42,12 +42,12 @@
         </transition>
       </li>
       <li>
-        <nuxt-link to="/listProduct">
+        <nuxt-link to="/peminjam">
           PEMINJAM
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/joke">
+        <nuxt-link to="/pendana">
           PENDANA
         </nuxt-link>
       </li>

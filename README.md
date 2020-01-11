@@ -54,6 +54,23 @@ select Node version
 nvm install v10.13.0
 ```
 
+### How to Start the project
+Running project with yarn or npm
+
+```
+$ npm install
+```
+then install yarn too and run this script
+
+```
+yarn
+```
+after that dont forget to running them
+
+```
+yarn run dev
+```
+
 Happy Code !!!!
 
 
