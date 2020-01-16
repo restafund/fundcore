@@ -5,115 +5,51 @@
         <h3>RestaFund Profile</h3>
       </div>
       <div>
-        <div class="ui indicating progress" :data-percent="percent">
-          <div class="bar" :style="`width:${percent}%`"></div>
-          <div class="label">Funding</div>
+        <div :data-percent="percent" class="ui indicating progress">
+          <div :style="`width:${percent}%`" class="bar" />
+          <div class="label">
+            Funding
+          </div>
         </div>
       </div>
-      <h4>Informasi Pekerjaan</h4>
-      <p>Mohon informasikan pekerjaan Anda saat ini.</p>
+      <h4>Informasi Diri</h4>
+      <p>Mohon informasikan Anda saat ini.</p>
       <div class="info">
-        <div class="list-question">
-          <div class="ui form">
+        <div v-for="(quest, i) in showQuestion" :key="i" class="list-question">
+          <div v-if="quest.IsVisible || formSend.PekerjaanAnda === 'Karyawan'" class="ui form">
             <div class="grouped fields">
-              <label>Pekerjaan?</label>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="job" checked="checked">
-                  <label>Karyawan</label>
+              <label>{{ quest.Description }} :</label>
+              <div v-if="quest.Option">
+                <div v-for="(Option, index) in quest.Option" :key="index" class="field">
+                  <div class="ui radio checkbox">
+                    <input v-model="formSend[quest.Question]" :value="Option" :id="Option" :name="quest.Id" type="radio">
+                    <label :for="Option">{{ Option }}</label>
+                  </div>
                 </div>
               </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="job">
-                  <label>Wiraswasta</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="job">
-                  <label>Profesional</label>
+              <div v-else class="ui right labeled input">
+                <label v-if="quest.Prefix" for="amount" class="ui label">{{ quest.Prefix }}</label>
+                <input v-model="formSend[quest.Question]" id="amount" :placeholder="quest.Description" type="number" min="0">
+                <div v-if="quest.Prefix" class="ui basic label">
+                  .00
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="list-question">
-          <div class="ui form">
-            <div class="grouped fields">
-              <label>Lama Bekerja?</label>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="howlong" checked="checked">
-                  <label>Kurang dari 1 Tahun</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="howlong">
-                  <label>1-2 Tahun</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="howlong">
-                  <label>Lebih dari 2 Tahun</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="list-question">
-          <div class="ui form">
-            <div class="grouped fields">
-              <label>Level pengalaman Bekerja?</label>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="experience" checked="checked">
-                  <label>Baru Mulai Bekerja (1-2 tahun bekerja)</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="experience">
-                  <label>Cukup Berpengalaman (2-5 tahun bekerja)</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="experience">
-                  <label>Berpengalaman (5-8 tahun bekerja)</label>
-                </div>
-              </div>
-              <div class="field">
-                <div class="ui radio checkbox">
-                  <input type="radio" name="experience">
-                  <label>Sangat Berpengalaman (sudah bekerja di atas 8 tahun)</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="list-question">
-          <label>Penghasilan Bersih per Bulan</label>
-          <div class="ui right labeled input">
-            <label for="amount" class="ui label">$</label>
-            <input type="number" min='0' placeholder="Amount" id="amount">
-            <div class="ui basic label">.00</div>
-          </div>
-        </div>
-      </div>
-      <buttonResta
+        <buttonResta
+          @click="nextProgress('fun-gadai')"
           background="yellow"
           label="NEXT"
           size="14"
-          @click="nextProgress('fun-gadai')"
         />
+      </div>
     </section>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import buttonResta from '../../components/smallComponents/button'
 
 export default {
@@ -124,10 +60,17 @@ export default {
   },
   data () {
     return {
-      percent: 25
+      percent: 25,
+      indexQuestion: 0,
+      showQuestion: [],
+      question: [],
+      formSend: {
+        PekerjaanAnda: ''
+      }
     }
   },
   mounted () {
+    this.getQuestion()
   },
   methods: {
     nextPage (link) {
@@ -136,7 +79,44 @@ export default {
       })
     },
     nextProgress () {
-      this.percent += 25
+      const { question, indexQuestion } = this
+      if (indexQuestion + 1 < question.length) {
+        this.percent += 25
+        this.indexQuestion += 1
+        this.showQuestion = question[indexQuestion + 1]
+        this.sendQuestion()
+      } else {
+        this.$router.push({
+          path: '/landingpage/'
+        })
+      }
+    },
+    getQuestion () {
+      axios
+        .get('https://learnwebapimongo20200114092830.azurewebsites.net/api/surveys')
+        .then((response) => {
+          const loop = Math.ceil(response.data.length / 4)
+          const newQuest = []
+          for (let a = 0; a < loop; a++) {
+            const temp = response.data.splice(0, 4)
+            newQuest.push(temp)
+          }
+          this.question = newQuest
+          this.showQuestion = newQuest[0]
+          // alert(response)
+          console.log(this.question)
+        })
+        .catch(error => alert(error))
+    },
+    sendQuestion () {
+      axios
+        .post('https://learnwebapimongo20200114092830.azurewebsites.net/api/answers', this.formSend, { headers: {
+          'Content-Type': 'application/json'
+        } })
+        .then((response) => {
+          console.log(response)
+        })
+        .catch(error => alert(error))
     }
   }
 }
