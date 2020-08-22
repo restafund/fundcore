@@ -196,6 +196,7 @@
 </template>
 
 <script>
+import { getProvinsi } from 'indonesiastatefull'
 import sliderHome from '../components/sliderHome'
 import Chart from '../assets/charts.svg'
 import groupInfo from '../assets/groupShare.svg'
@@ -204,6 +205,7 @@ import bigCircle from '../assets/oval.svg'
 import fundImg from '../assets/fund.svg'
 import purpleImg from '../assets/Mask.svg'
 import defaultImg from '../assets/pretty-home-min.jpg'
+
 export default {
   components: {
     sliderHome, buttonResta
@@ -284,6 +286,9 @@ export default {
         path: '/listProduct/'
       })
     }
+  },
+  mounted () {
+    console.log(getProvinsi())
   }
 }
 </script>

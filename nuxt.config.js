@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { property: 'og:title', content: 'short title of your website/webpage' },
+      { property: 'og:title', content: 'RestaFund for Life' },
       { property: 'og:url', content: 'https:/dioadhita.com/' },
       { property: 'og:description', content: 'Biarkan Properti Kamu Bekerja Untuk Kamu' },
       { property: 'og:image', content: 'https://restafund.com/wp-content/uploads/2019/07/restafundlogo2.png' },

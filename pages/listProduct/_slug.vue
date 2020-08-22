@@ -67,8 +67,8 @@
 </template>
 
 <script>
-import buttonResta from '../../components/smallComponents/button'
-import wallpaper from '../../assets/wallpaper1.jpg'
+import buttonResta from '@/components/smallComponents/button'
+import wallpaper from '@/assets/wallpaper1.jpg'
 import TableComponent from '@/components/tabTable'
 import KTP from '@/assets/detail2.svg'
 import NPWP from '@/assets/detail1.svg'

@@ -43,13 +43,13 @@
 </template>
 
 <script>
-import Chart from '../../assets/charts.svg'
-import groupInfo from '../../assets/groupShare.svg'
-import buttonResta from '../../components/smallComponents/button'
-import bigCircle from '../../assets/oval.svg'
-import fundImg from '../../assets/fund.svg'
-import purpleImg from '../../assets/Mask.svg'
-import defaultImg from '../../assets/pretty-home-min.jpg'
+import Chart from '@/assets/charts.svg'
+import groupInfo from '@/assets/groupShare.svg'
+import buttonResta from '@/components/smallComponents/button'
+import bigCircle from '@/assets/oval.svg'
+import fundImg from '@/assets/fund.svg'
+import purpleImg from '@/assets/Mask.svg'
+import defaultImg from '@/assets/pretty-home-min.jpg'
 import KTP from '@/assets/detail2.svg'
 import NPWP from '@/assets/detail1.svg'
 import NameCard from '@/assets/detail3.svg'
